@@ -1,0 +1,34 @@
+<app-search (handleSearch)="onSearchChange($event)"></app-search>
+<app-filter [all]="getAllProducts()"
+[available]="getAvailableProducts()"
+[not_available]="getNotAvailableProducts()"
+(handleFilter)="onFilterBtnChange($event)"></app-filter>
+<div class="product_wrapper">
+    <ng-container *ngFor="let p of products">
+        <div *ngIf="!searchText || p.name.toLowerCase().includes(searchText.toLowerCase())">
+            <div class="product" *ngIf="productCountBtn === 'All' || productCountBtn === p.availability">
+                <img [src]="p.image" class="p-img" />
+                <div class="products_details">
+                    <div class="p-details">
+                        <p class="p-name">{{ p.name }}</p>
+                        <div class="details-items">
+                            <p [ngStyle]="{color: p.availability === 'Available' ? 'green' : 'red'}">
+                                {{ p.availability }}
+                            </p>
+                            <p>${{ p.price }}</p>
+                            <p>{{ p.color }}</p>
+                        </div>
+                    </div>
+                    <div class="p-btn">
+                        <button class="show-btn">Add to Cart</button>
+                        <button class="buy-btn" *ngIf="p.availability === 'Available'; else notifyme">Buy Now</button>
+                        <ng-template #notifyme>
+                            <button class="notify-btn">Notify Me</button>
+                        </ng-template>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+</div>
+

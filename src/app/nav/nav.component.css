@@ -1,0 +1,28 @@
+*{
+    color: #005C7D;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 30px;
+    /* width: 100%; */
+    
+}
+.login a{
+    cursor: pointer;
+}
+.nav-links a{
+    text-decoration: none;
+    margin: 0px 10px;
+    padding: 10px;
+}
+.nav-links a:hover{
+    background-color: #005C7D;
+    color: #fff;
+}
+.active-link{
+    background-color: #005C7D;
+    padding: 10px;
+    color: #fff;
+}

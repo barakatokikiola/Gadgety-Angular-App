@@ -1,0 +1,16 @@
+<div class="navbar">
+    <div class="site-name">
+        <h2>Gadgety</h2>
+    </div>
+    <div class="nav-links"  >
+        <a routerLink="" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">HOME</a>
+        <a routerLink="/products" routerLinkActive="active-link">PRODUCTS</a>
+        <a routerLink="/contact" routerLinkActive="active-link">CONTACT</a>
+        <a routerLink="/about" routerLinkActive="active-link">ABOUT</a>
+        <a routerLink="/cart" routerLinkActive="active-link">CART</a>
+    <span class="login">
+        <a (click)="login()">Login</a>
+        <a (click)="logout()">Logout</a>
+    </span>
+    </div>
+</div>

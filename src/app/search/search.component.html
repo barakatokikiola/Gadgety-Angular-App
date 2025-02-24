@@ -1,0 +1,5 @@
+<div class="search" [ngClass]="{change_bg: searchValue != ''}">
+    
+    <input type="text" placeholder="Search" [(ngModel)]="searchValue" (input)="handleChange()">
+   
+</div>

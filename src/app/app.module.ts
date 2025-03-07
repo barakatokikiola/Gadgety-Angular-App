@@ -20,6 +20,8 @@ import { ProductsService } from './Services/products.service';
 import { AuthService } from './Services/auth.service';
 import { CanDeactivateGuardService } from './Services/can-deactivate-guard.service';
 import { ProductResolveService } from './Services/product-resolve.service';
+import { BestsellersComponent } from './bestsellers/bestsellers.component';
+import { TemplateFormComponent } from './Services/template-form/template-form.component';
 
 
 
@@ -38,7 +40,9 @@ import { ProductResolveService } from './Services/product-resolve.service';
     CustomerListComponent,
     ContactComponent,
     AboutComponent,
-    CartComponent
+    CartComponent,
+    BestsellersComponent,
+    TemplateFormComponent
   ],
   imports: [
     BrowserModule,

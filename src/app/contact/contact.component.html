@@ -4,11 +4,23 @@
             <h1>We’d Love to Hear From You!</h1>
             <p>Got a question, suggestion, or just want to say hello? Our team is here and happy to help.</p>
         </div>
-        <form>
-            <input type="text" placeholder="Name" name="username" [(ngModel)]="name">
-            <input type="email" placeholder="Email" name="user_mail" [(ngModel)]="email">
-            <textarea rows="7" placeholder="Message" name="message" [(ngModel)]="message"></textarea>
-            <button>Submit</button>
+        <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+
+            <div ngModelGroup="personalDetails" #personalDetails="ngModelGroup">
+                <input #name="ngModel" type="text" placeholder="Name" name="username" ngModel required>  
+            
+            <input type="text" placeholder="Email" name="email" ngModel required email>
+            <div><small *ngIf="personalDetails.invalid && personalDetails.touched">Values are required</small></div>
+            </div>
+            <textarea rows="7" placeholder="Message" name="message" ngModel></textarea>
+            <div class="radio_btn">
+            <label for="gender">Gender:</label>
+            <input type="radio" value="male" id="male" name="gender" ngModel/>
+            <label for="male">Male</label>
+            <input type="radio" value="female" id="female" name="gender" ngModel/>
+            <label for="female">Female</label>
+            </div>
+            <button type="submit">Submit</button>
         </form>
     </div>
 </div>

@@ -5,13 +5,10 @@
 }
 
 .contact{
-    display: flex;
-    flex-direction: column;
-    width: 60%;
     margin: 0 auto;
-    justify-content: center;
-    text-align: center;
-}
+    width: 60%;
+  
+}    
 .contact_text{
     padding: 1rem 0rem;
 }
@@ -22,25 +19,40 @@ form{
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 2rem 0rem;
+    
 }
-input, textarea{
+input[type='text'], textarea{
     padding: 0.5rem;
+    width: 100%;
+    margin-bottom: 10px;
     border: none;
     border-radius: 5px;
     outline: none;
-    background-color: rgb(196, 208, 219);
+    
 }
 button{
     display: flex;
     justify-content: center;
-    /* margin: 0 auto; */
+   
     padding: 1rem;
     border: none;
     background-color: #02465f;
     text-align: center;
     font-weight: 500;
     font-size: 0.9rem;
-    width: 20%;
+    width: 100%;
     color: white;
+}
+.radio_btn{
+    display: flex;
+    margin: 20px 0px;
+}
+.radio_btn input{
+    margin-left: 20px;
+}
+input.ng-invalid.ng-touched{
+    border: solid 1px red;
+}
+small{
+    color: red;
 }

@@ -1,0 +1,27 @@
+.container{
+    width: 90%;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
+}
+.product{
+    border: solid 1px #eee;
+}
+.best_sellers{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+img{
+    height: 250px;
+    width: 100%;
+}
+.specs {
+    display: flex;
+    justify-content: space-between;
+}
+.product_details{
+    border-top:solid 1px #eee ;
+    padding: 5px;
+}

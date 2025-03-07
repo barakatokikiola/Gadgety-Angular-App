@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="header">
+        <h1>Best Seller</h1>
+    </div>
+    <div class="best_sellers" >
+        <div class="product" *ngFor="let p of bestsellers">
+            <img [src]="p.image"/>
+            <div class="product_details">
+                <h4>{{p.name}}</h4>
+                <div class="specs">
+                    <p>${{p.price}}</p>
+                    <p>{{p.color}}</p>
+                </div>
+                <div class="btns">
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
